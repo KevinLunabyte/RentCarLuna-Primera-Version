@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunaRentCar | Lujo y Tecnología</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="hero-section">
+        <!-- MENÚ SUPERIOR -->
+        <nav class="top-nav">
+            <div class="logo-text">🌙 LunaRentCar</div>
+            <div class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="/vehiculos">Vehículos</a>
+                <a href="/contacto">Contacto</a>
+            </div>
+            <button class="btn-primary">Reservar Ahora</button>
+        </nav>
+
+        <!-- CONTENIDO CENTRAL -->
+        <div class="hero-content">
+            <p class="tagline">Lujo • Tecnología • Confianza</p>
+            <h1 class="neon-title">
+                <span class="luna">Luna</span><span class="rentcar">RentCar</span>
+            </h1>
+            <p class="location">Santiago • República Dominicana</p>
+
+            <!-- EL BUSCADOR-->
+            <form action="/buscar" method="POST" class="search-widget">
+                <div class="input-group">
+                    <label>Lugar de Recogida</label>
+                    <select name="recogida" required>
+                        <option value="" disabled selected hidden>Santiago, Aeropuerto AIC</option>
+                        <option value="AIC" style="background-color: #0f0028;">Aeropuerto Int. Cibao (STI) - Santiago</option>
+                        <option value="AILA" style="background-color: #0f0028;">Aeropuerto Int. de Las Américas (SDQ)</option>
+                        <option value="PUJ" style="background-color: #0f0028;">Aeropuerto Int. de Punta Cana (PUJ)</option>
+                        <option value="POP" style="background-color: #0f0028;">Aeropuerto Int. Gregorio Luperón (POP)</option>
+                        <option value="LRM" style="background-color: #0f0028;">Aeropuerto Int. de La Romana (LRM)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha Recogida</label>
+                    <input type="date" name="fecha_recogida" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha Devolución</label>
+                    <input type="date" name="fecha_devolucion" required>
+                </div>
+
+                <button type="submit" class="btn-search">Buscar Vehículos</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | LunaRentCar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #050010; color: white; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+
+    <!-- MENÚ SUPERIOR -->
+    <nav class="top-nav">
+        <div class="logo-text">🌙 LunaRentCar</div>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/vehiculos">Vehículos</a>
+            <a href="/contacto">Contacto</a>
+        </div>
+        <button class="btn-primary">Reservar Ahora</button>
+    </nav>
+
+    <!-- CUERPO DE LA PÁGINA DE CONTACTO -->
+    <section class="contact-page-container" style="padding: 120px 20px; text-align: center;">
+        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 38px; margin-bottom: 10px;">
+            ¿Listo para el <span style="color: #00ffff; text-shadow: 0 0 10px #00ffff;">Siguiente Nivel</span>?
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.6); font-size: 16px; margin-bottom: 50px;">
+            Comunícate directamente con nosotros a través de nuestras plataformas oficiales.
+        </p>
+        
+        <div class="contact-buttons-grid">
+            <!-- TARJETA WHATSAPP -->
+            <a href="https://wa.me/18297906662?text=Hola%20LunaRentCar,%20vengo%20de%20la%20página%20web%20y%20quiero%20más%20información" target="_blank" class="contact-card whatsapp-card">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p>829-790-6662</p>
+                <span class="action-text">Chatear ahora →</span>
+            </a>
+
+            <!-- TARJETA INSTAGRAM -->
+            <a href="https://instagram.com/itskevin.dx" target="_blank" class="contact-card instagram-card">
+                <div class="contact-icon">📸</div>
+                <h3>Instagram</h3>
+                <p>@itskevin.dx</p>
+                <span class="action-text">Seguir cuenta →</span>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; color: rgba(255,255,255,0.3); font-size: 13px; border-top: 1px solid rgba(138,43,226,0.2);">
+        © 2026 LunaRentCar. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
